@@ -1,0 +1,77 @@
+body {
+    background: #232323;
+    margin: 0 !important;
+    font-size: 16px;
+    font-family: "Montserrat", "Avenir";
+}
+
+.square {
+    padding-bottom: 30%;
+    width: 30%;
+    margin: 1.6%;
+    float: left;
+    background: pink;
+    border-radius: 50%;
+    transition: background 0.8s;
+    --webkit-transition: background 0.8s;
+    --moz-transition: background 0.8s;
+}
+
+.container {
+    max-width: 600px; 
+    margin: 1em auto;
+}
+
+.heading {
+    background: steelblue;
+    margin: 0;
+}
+
+.heading h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.option-menu {
+    background-color: white;
+    color: steelblue;
+    margin: 0;
+    height: 2em;
+}
+
+.option-menu button {
+    color: steelblue;
+    background: none;
+    font-weight: 700;
+    height: 100%;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: inherit;
+    transition: all 0.5s;
+    --webkit-transition: all 0.5s;
+    --moz-transition: all 0.5s;
+    outline: none;
+}
+
+.option-menu button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.selected {
+    background-color: steelblue !important;
+    color: white !important;
+}
+
+#message {
+    display: inline;
+    width: 25%;
+    text-transform: uppercase;
+}
+
+#colorHeading {
+    font-size: 2em;
+}
