@@ -29,14 +29,14 @@ hardModeButton.addEventListener("click", hardMode);
 headingColor.textContent = pickedColor;
 
 //Loop through the squares and set a random color to each of them 
-for(var i = 0; i < colors.length; i++) {
+for (var i = 0; i < colors.length; i++) {
     squares[i].style.backgroundColor = colors[i];
     //Add event listener whether the picked color matches or does not
-    squares[i].addEventListener("click", function(){
+    squares[i].addEventListener("click", function () {
         var clickedColor = this.style.backgroundColor;
-        if(clickedColor === pickedColor) {
+        if (clickedColor === pickedColor) {
             winColorChoice();
-        }else {
+        } else {
             this.style.backgroundColor = "#232323";
             message.textContent = "Try again";
         }
@@ -45,7 +45,7 @@ for(var i = 0; i < colors.length; i++) {
 
 function randomColors(number) {
     var colors = [];
-    for(var i = 0; i < number; i++) {
+    for (var i = 0; i < number; i++) {
         colors.push(randomRGBColor());
     }
     return colors;
@@ -66,7 +66,7 @@ function winColorChoice() {
     message.textContent = "Correct!";
     resetButton.textContent = "Play again?";
 
-    for(var i = 0; i < colors.length; i++) {
+    for (var i = 0; i < colors.length; i++) {
         squares[i].style.backgroundColor = pickedColor;
     }
 }
@@ -74,14 +74,14 @@ function winColorChoice() {
 function reset() {
     colors = randomColors(selectedMode["numSquares"]);
     pickedColor = colors[Math.floor(Math.random() * colors.length)];
-    
+
     resetButton.textContent = "New colors";
 
     heading.style.backgroundColor = "steelblue";
     headingColor.textContent = pickedColor;
     message.textContent = "";
 
-    for(var i = 0; i < colors.length; i++) {
+    for (var i = 0; i < colors.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
 }
